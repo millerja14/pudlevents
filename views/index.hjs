@@ -1,11 +1,89 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>{{ title }}</title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <meta charset="utf-8">
+    <meta name="viewport" content='width=device-width, initial-scale=1.0'>
+    <meta http-equiv="X-UA-Compatible" content='ie=edge'>
+    <title>Pudlevents</title>
+    <link rel='stylesheet' href='/stylesheets/parallax.css' />
+
+    {{> head }}
+
   </head>
   <body>
-    <h1>{{ title }}</h1>
-    <p>Welcome to {{ title }}</p>
+
+    <div class='container-fluid fixed-top' style='display: none; padding: 0px;' id='navbar'>
+      {{> header }}
+    </div>
+
+    <div class='pimg1'>
+      <div class='ptext'>
+        <span class='border'>
+          <img src="/images/Splash_logo.png" width="40" height="40" class="d-inline-block align-top" alt="">
+            Welcome to Pudl
+        </span>
+      </div>
+    </div>
+
+    <section class="section section-dark">
+        <h2>Plan Get-Togethers Fast</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+    </section>
+
+    <div class='pimg2'>
+      <div class='ptext'>
+
+      </div>
+    </div>
+
+    <section class="section section-light">
+        <h2>Find Time To Hang Out</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+    </section>
+
+    <div class='pimg3'>
+      <div class='ptext'>
+
+      </div>
+    </div>
+
+    <section class="section section-dark">
+        <h2>Find Others With Similar Interests</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+    </section>
+
+    <div class='pimg4'>
+      <div class='ptext'>
+        <span class='border'>
+          get connected today
+        </span>
+      </div>
+    </div>
+
+    <script type="text/javascript">
+      $(document).ready(function(){
+        var $nav = $('#navbar');//Caching element
+
+        // fade in .navbar
+        $(function () {
+            $(window).scroll(function () {
+                // set distance user needs to scroll before we start fadeIn
+                if ($(this).scrollTop() > 100) { //For dynamic effect use $nav.height() instead of '100'
+                    $nav.fadeIn();
+                } else {
+                    $nav.fadeOut();
+                }
+            });
+        });
+
+      });
+    </script>
+
   </body>
 </html>
